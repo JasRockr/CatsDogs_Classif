@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <title>Clasificador | Perros & Gatos</title>
+
+    <%- include('templates/head.ejs') %>
+</head>
+
+<body>
+    
+    <%- include('templates/navigation.ejs') %>
+    <%- include('templates/header.ejs') %>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-4 offset-md-4 text-center">
+                    <!-- Tag de Video para la webcam -->
+                    <video id="video" playsinline autoplay style="width: 1px;"></video>
+                    <button class="btn btn-primary mb-2" id="cambiar-camara" onclick="cambiarCamara();">Cambiar
+                        camara</button>
+                    <!-- Canvas para visualizacion -->
+                    <canvas id="canvas" width="400" height="400" style="max-width: 100%;"></canvas>
+                    <!-- Canvas oculto redimensionado -->
+                    <canvas id="otrocanvas" width="150" height="150" style="display: none"></canvas>
+                    <div id="resultado"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('templates/footer.ejs') %>
+
+</body>
+
+</html>
